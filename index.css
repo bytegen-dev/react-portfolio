@@ -38,6 +38,7 @@ body{
 @media screen and (max-width: 550px) {
     .container{
         border-radius: 0px;
+        position: relative;
         height: 100vh;
         width: 100vw;
     }
@@ -125,7 +126,7 @@ body{
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
