@@ -27,7 +27,7 @@ body{
 .container{
     border-radius: 30px;
     width: 100vw;
-    max-width: 450px;
+    max-width: 550px;
     /* min-height: 100%; */
     max-height: fit-content;
     overflow: scroll;
@@ -35,20 +35,21 @@ body{
     background-color: #23252C;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .container{
         border-radius: 0px;
     }
 }
 
 .profile-photo{
-    height: 500px;
+    height: 400px;
+    /* max-height: 500px; */
     overflow: hidden;
+    object-position: center;
 }
 
 .profile-photo img{
     width: 100%;
-    /* object-position: top; */
 }
 
 .user-info{
