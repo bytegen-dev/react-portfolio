@@ -42,12 +42,13 @@ body{
 }
 
 .profile-photo{
-    height: 400px;
+    height: 500px;
     overflow: hidden;
 }
 
 .profile-photo img{
     width: 100%;
+    /* object-position: top; */
 }
 
 .user-info{
