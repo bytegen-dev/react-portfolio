@@ -2,6 +2,9 @@ function ProfilePhoto(){
     return (
             // <img src = "./img/profile-photo.jpg"/>
         <div className = "profile-photo">
+            <a href = "./img/profile-photo.jpg" download = "">
+                <i className = "fa fa-cloud-arrow-down" />
+            </a>
         </div>
     )
 }

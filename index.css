@@ -11,7 +11,7 @@ body{
     align-items: center;
     height: 100vh;
     width: 100vw;
-    /* padding: 20px; */
+    -webkit-tap-highlight-color: transparent;
 }
 
 #root{
@@ -21,18 +21,34 @@ body{
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(#444, #222);
-    /* background: #444; */
 }
 
 .container{
-    border-radius: 30px;
+    position: relative;
+    border-radius: 50px;
     width: 100vw;
-    max-width: 550px;
-    /* min-height: 100%; */
+    max-width: 500px;
     max-height: fit-content;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     box-shadow: 0px 0px 20px #0007;
     background-color: #23252C;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #161619;
 }
 
 @media screen and (max-width: 550px) {
@@ -42,6 +58,11 @@ body{
         height: 100vh;
         width: 100vw;
     }
+
+    footer{
+        position: fixed;
+        width: 100%;
+    }
 }
 
 .profile-photo{
@@ -50,6 +71,48 @@ body{
     background-image: url(./img/profile-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.7s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo a{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 40px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-50px);
+}
+
+.profile-photo a:hover{
+    scale: 1.1;
+    /* color: #161619; */
+}
+
+.profile-photo:hover a{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-photo::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    transition: all 0.7s ease;
+}
+
+.profile-photo:hover::before{
+    opacity: 1;
+
 }
 
 .user-info{
@@ -94,7 +157,9 @@ body{
     height: 35px;
     font-size: 14px;
     border: none;
+    transition: all 0.5s ease;
 }
+
 
 .link-btn.i{
     color: #374151;
@@ -104,6 +169,11 @@ body{
 .link-btn.ii{
     color: #fff;
     background-color: #5093E2;
+}
+
+.link-btn:hover{
+    background: #161619;
+    color: #fff;
 }
 
 .about, .interests{
@@ -125,16 +195,8 @@ body{
     margin-bottom: 100px;
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #161619;
-}
+
+
 
 .social-links{
     display: flex;
@@ -156,4 +218,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background: #fff;
 }
