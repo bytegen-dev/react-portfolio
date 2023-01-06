@@ -1,7 +1,7 @@
 function ProfilePhoto(){
     return (
+            // <img src = "./img/profile-photo.jpg"/>
         <div className = "profile-photo">
-            <img src = "./img/profile-photo.jpg"/>
         </div>
     )
 }
