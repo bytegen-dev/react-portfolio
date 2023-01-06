@@ -40,7 +40,7 @@ function Interests(){
     return(
         <div className = "interests">
             <h2>Interests</h2>
-            <span>Food expert. Music scholar. Reader. Internet fanatic. Bacon buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.</span>
+            <span>Gaming. Movies. Reading Comments. Anime and Manga comics. Marvel Comics. Music Lover. Travel Geek. I really love Food.</span>
         </div>
     )
 }
