@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* padding: 20px; */
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#444, #222);
+    /* background: #444; */
+}
+
+.container{
+    border-radius: 30px;
+    width: 100vw;
+    max-width: 450px;
+    /* min-height: 100%; */
+    max-height: fit-content;
+    overflow: scroll;
+    box-shadow: 0px 0px 20px #0007;
+    background-color: #23252C;
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        border-radius: 0px;
+    }
+}
+
+.profile-photo{
+    height: 400px;
+    overflow: hidden;
+}
+
+.profile-photo img{
+    width: 100%;
+}
+
+.user-info{
+    color: #fff;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-info h3{
+    margin-bottom: 7px;
+}
+
+.user-info a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.link-buttons{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.link-btn{
+    cursor: pointer;
+    /* padding: 10px; */
+    width: 115px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+}
+
+.link-btn.i{
+    color: #374151;
+    background-color: #fff;
+}
+
+.link-btn.ii{
+    color: #fff;
+    background-color: #5093E2;
+}
+
+.about, .interests{
+    color: #ffffff;
+    
+    padding: 20px;
+}
+
+.about h2, .interests h2{
+    margin-bottom: 10px;
+}
+
+.about span, .interests span{
+    color: #acacac;
+    /* padding: 20px; */
+}
+
+.interests{
+    margin-bottom: 30px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #161619;
+}
+
+.social-links{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-links a{
+    width: 30px;
+    height: 30px;
+    background-color: #918E9B;
+    color: #161619;
+    /* padding: 5px; */
+    font-size: 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
