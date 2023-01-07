@@ -1,3 +1,23 @@
+function Hamburger(props) {
+    return (
+      <div className="hamburger" onClick={props.onClick}>
+        <i className="fa fa-bars" />
+        <i className="fa fa-close" />
+      </div>
+    );
+  }
+  
+
+function Menu(){
+    return(
+        <div className = "menu">
+            <a href ="#">
+                <i className = "fa fa-home" />
+            </a>
+        </div>
+    )
+}
+
 function ProfilePhoto(){
     return (
             // <img src = "./img/profile-photo.jpg"/>
@@ -66,10 +86,15 @@ function Footer(){
     )
 }
 
+function menuShow(){
+    alert("I'm still learning how to handle props in react... its so different from event listeners in javacript and classlist.toggle 😪")
+}
 
 function App(){
     return(
         <div className = "container">
+            <Hamburger onClick={menuShow} />
+            <Menu />
             <ProfilePhoto />
             <UserInfo />
             <About />
@@ -79,6 +104,13 @@ function App(){
     )
 }
 
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(<App />)
+
+
+// let ham = document.querySelector(".hamburger")
+
+// ham.addEventListener("click", menuShow)
